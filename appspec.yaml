@@ -1,12 +1,12 @@
-service: replicator
+version: 0.0
+# In the Resources section specify the name, alias, 
+# target version, and (optional) the current version of your AWS Lambda function. 
+Resources:
+  - MyFunction: # Replace "MyFunction" with the name of your Lambda function 
+      Type: AWS::Lambda::Function
+      Properties:
+        Name: "replicate" # Specify the name of your Lambda function
+        Alias: "replicate" # Specify the alias for your Lambda function
+        CurrentVersion: "0.0.1" # Specify the current version of your Lambda function
+        TargetVersion: "0.0.1" # Specify the version of your Lambda function to deploy
 
-
-provider:
-  name: aws
-  runtime: nodejs8.10
-  stage: dev
-  
-functions:
-  replicate:
-    handler: handler.replicate
-  
