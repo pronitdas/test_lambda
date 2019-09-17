@@ -9,3 +9,4 @@ provider:
 functions:
   replicate:
     handler: handler.replicate
+  
