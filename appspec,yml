@@ -1,0 +1,11 @@
+service: replicator
+
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: dev
+  
+functions:
+  replicate:
+    handler: handler.replicate
